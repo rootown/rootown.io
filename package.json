@@ -1,0 +1,47 @@
+{
+	"private": true,
+	"description": "Next.js-powered website deployed at rootown.io",
+	"scripts": {
+		"dev": "next",
+		"build": "next build && next export",
+		"start": "next start",
+		"test": "prettier --write --loglevel silent . && xo --fix --quiet && tsc --project ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rootown/rootown.github.io.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rootown/rootown.github.io/issues"
+	},
+	"homepage": "https://github.com/rootown/rootown.github.io#readme",
+	"dependencies": {
+		"next": "^9.4.4",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"devDependencies": {
+		"@types/node": "^14.0.23",
+		"@types/react": "^16.9.43",
+		"eslint-config-xo-react": "^0.23.0",
+		"eslint-plugin-react": "^7.20.3",
+		"eslint-plugin-react-hooks": "^4.0.8",
+		"typescript": "^3.9.7",
+		"xo": "^0.32.1"
+	},
+	"prettier": {
+		"useTabs": true,
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"bracketSpacing": true
+	},
+	"xo": {
+		"extends": "xo-react",
+		"prettier": true,
+		"rules": {
+			"import/no-unassigned-import": 0,
+			"react/prop-types": 0
+		}
+	}
+}

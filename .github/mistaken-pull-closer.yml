@@ -1,3 +1,0 @@
-filters:
-  - @.pull_request.base.ref == "master"
-commentBody: "We don't accept pull requests for the master branch, see: `CONTRIBUTING.md`"

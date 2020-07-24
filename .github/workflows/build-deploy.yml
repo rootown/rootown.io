@@ -30,3 +30,11 @@ jobs:
           FOLDER: out
           CLEAN: true
           SSH: true # SSH must be set to true so the deploy action knows which protocol to deploy with.
+          
+      - name: Cache 💾
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
